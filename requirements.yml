@@ -1,2 +1,5 @@
 - src: https://github.com/geerlingguy/ansible-role-gitlab
   name: gitlab
+
+- src: https://github.com/geerlingguy/ansible-role-jenkins
+  name: jenkins

@@ -1,0 +1,11 @@
+---
+- name: Jenkins
+  hosts: all
+  remote_user: root
+
+  roles:
+    - role: geerlingguy.java
+      when: "ansible_os_family == 'RedHat'"
+      java_packages:
+        - java-1.8.0-openjdk
+    - role: jenkins

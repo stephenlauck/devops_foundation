@@ -5,14 +5,12 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+# This is an example test, replace it with your own test.
+
+describe http('https://172.20.10.10/users/password/edit?reset_password_token=Gub1eXy7DXeh995q-MdN', ssl_verify: false) do
+  its('status') { should cmp 200 }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe http('http://172.20.10.11:8080/') do
+  its('status') { should cmp 200 }
 end

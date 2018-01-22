@@ -13,6 +13,9 @@ transport:
 platforms:
   - name: centos-7.4
 
+verifier:
+  name: inspec
+
 suites:
 # login to gitlab at https://172.20.10.10/
 # username/password root/5iveL!fe
@@ -22,6 +25,19 @@ suites:
     driver:
       network:
         - ['private_network', {ip: '172.20.10.10'}]
+      customize:
+        memory: 2048
+        cpus: 1
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+
+  - name: jenkins
+    provisioner:
+      playbook: jenkins.yml
+    driver:
+      network:
+        - ['private_network', {ip: '172.20.10.11'}]
       customize:
         memory: 2048
         cpus: 1
