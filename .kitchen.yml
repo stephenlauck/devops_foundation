@@ -30,7 +30,7 @@ suites:
         cpus: 1
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/smoke/gitlab
 
   - name: jenkins
     provisioner:
@@ -43,4 +43,4 @@ suites:
         cpus: 1
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/smoke/jenkins
