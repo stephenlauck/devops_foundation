@@ -1,0 +1,2 @@
+- src: https://github.com/geerlingguy/ansible-role-gitlab
+  name: gitlab

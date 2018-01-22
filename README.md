@@ -6,8 +6,8 @@
 We need to write build and test code. Then we push that code to a central repository. If we do not have the code to build a central repository that should be the first code that we write.
 
 1. write, build and test the code to [build](#provisioning-as-code) a VCS
-  a. ansible code to install/configure Gitlab
   b. Kitchen file to build local infrastructure
+  a. ansible code to install/configure Gitlab
   c. Inspec code to validate our build
 2. from laptop build VCS
 3. push code to build VCS into VCS
@@ -35,3 +35,5 @@ We need a code driven provisioning process in order to build our infrastructure.
 2. from laptop build the infrastructure
 3. push code that builds infrastrcture to VCS
 4. pipeline infrastructure build with Jenkinsfile
+
+### Compliance as Code

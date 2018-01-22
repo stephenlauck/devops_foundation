@@ -1,0 +1,28 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  require_chef_for_busser: false
+  hosts: localhost
+
+transport:
+  max_ssh_sessions: 6
+
+platforms:
+  - name: centos-7.4
+
+suites:
+# login to gitlab at https://172.20.10.10/
+# username/password root/5iveL!fe
+  - name: gitlab
+    driver:
+      network:
+        - ['private_network', {ip: '172.20.10.10'}]
+      customize:
+        memory: 2048
+        cpus: 1
+    verifier:
+      inspec_tests:
+        - test/smoke/default
