@@ -17,6 +17,8 @@ suites:
 # login to gitlab at https://172.20.10.10/
 # username/password root/5iveL!fe
   - name: gitlab
+    provisioner:
+      playbook: gitlab.yml
     driver:
       network:
         - ['private_network', {ip: '172.20.10.10'}]

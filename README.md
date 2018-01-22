@@ -3,11 +3,11 @@
 
 ### Write, build and test code
 
-We need to write build and test code. Then we push that code to a central repository. If we do not have the code to build a central repository that should be the first code that we write.
+We need to write build and test code. Then we push that code to a central repository. If we do not have a central repository that should be the first code that we write.
 
-1. write, build and test the code to [build](#provisioning-as-code) a VCS
+1. write, build and test the code to [build](#provisioning-as-code) a VCS (version control system)
   b. Kitchen file to build local infrastructure
-  a. ansible code to install/configure Gitlab
+  a. Ansible code to install/configure Gitlab
   c. Inspec code to validate our build
 2. from laptop build VCS
 3. push code to build VCS into VCS
