@@ -9,3 +9,7 @@
       java_packages:
         - java-1.8.0-openjdk
     - role: jenkins
+      jenkins_plugins_state: latest
+      jenkins_plugins:
+        - gitlab-plugin
+        - workflow-aggregator

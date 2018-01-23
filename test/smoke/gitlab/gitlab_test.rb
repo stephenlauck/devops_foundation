@@ -6,5 +6,5 @@
 # found at http://inspec.io/docs/reference/resources/
 
 describe http('https://172.20.10.10/users/password/edit?reset_password_token=Gub1eXy7DXeh995q-MdN', ssl_verify: false) do
-  its('status') { should cmp 200 }
+  its('status') { should cmp 302 }
 end
