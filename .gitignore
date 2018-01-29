@@ -18,3 +18,20 @@ bin/*
 
 # Ansible
 roles/
+
+#OS X
+.DS_Store
+._*
+.DocumentRevisions*
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# JetBrains
+.idea/
+out/
+
+# Vim
+*~
+*.swp
